@@ -119,8 +119,9 @@ class Pusher
   end
 
   def notify(message, code)
-    @message = message
-    @code    = code
+    unless code == 200
+      puts code, message
+    end
     false
   end
 
